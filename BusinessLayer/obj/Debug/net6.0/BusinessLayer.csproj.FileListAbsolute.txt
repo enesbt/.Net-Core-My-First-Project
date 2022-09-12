@@ -1,0 +1,17 @@
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CopyComplete
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll

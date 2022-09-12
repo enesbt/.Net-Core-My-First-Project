@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "EditCategory";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h5>Kategori Düzenle</h5>
+
+<form method="post" class="form-group">
+
+
+  <input class="form-control" asp-for="CategoryId" hidden />
+    <label>Kategori Adı</label>
+    <input asp-for="CategoryName" class="form-control" />
+    <br />
+    <input class="btn btn-danger" value="Düzenle" type="submit" />
+</form>

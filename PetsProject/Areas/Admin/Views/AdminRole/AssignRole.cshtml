@@ -1,0 +1,17 @@
+﻿@model List<PetsProject.Areas.Admin.Models.RoleAssignViewModel>
+@{
+    ViewData["Title"] = "AssignRole";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h1>AssignRole</h1>
+
+<form method="post" class="form-group">
+    @for(int i=0;i<Model.Count;i++){
+        <input type="hidden" asp-for="@Model[i].RoleId" class="form-control" />
+        <input type="hidden" asp-for="@Model[i].RoleName" class="form-control" />
+        <input type="checkbox" asp-for="@Model[i].Exists"class="form-check-input"  />
+        <label class="form-control" for="@Model[i].Exists">@Model[i].RoleName</label>
+    }
+    <input class="btn btn-outline-dark" value="Kaydet" type="submit" />
+</form>

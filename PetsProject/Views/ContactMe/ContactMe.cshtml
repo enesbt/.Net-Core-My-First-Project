@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.ContactMe
+@{
+    ViewData["Title"] = "ContactMe";
+    Layout = "~/Views/Shared/Layouts/_MainLayout.cshtml";
+}
+
+
+
+<div class="comment-top mt-4">
+    <br />
+    <h4>İlan Sahibine Ulaş</h4>
+    <br />
+    <div class="comment-bottom mt-2">
+        <form asp-action="ContactMe" asp-controller="ContactMe" method="post">
+            <input class="form-control " type="text" asp-for="Name" placeholder="İsminiz" required="">
+            <input class="form-control mt-3" type="email" asp-for="Mail" placeholder="Email" required="">
+            <input class="form-control mt-3" type="tel" asp-for="PhoneNumber" placeholder="Telefon" required="">
+            <input class="form-control mt-3" asp-for="PetPostId" value="@ViewBag.Id" type="hidden">
+            <input class="form-control mt-3" asp-for="Status" value="@true" type="hidden">
+            <textarea class="form-control mt-3" placeholder="Mesajınız..." asp-for="Message" required=""></textarea>
+            <button type="submit" class="btn btn-primary submit">Gönder</button>
+        </form>
+    </div>
+</div>

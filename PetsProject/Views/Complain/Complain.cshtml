@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.Complain
+@{
+    ViewData["Title"] = "Complain";
+    Layout = "~/Views/Shared/Layouts/_MainLayout.cshtml";
+}
+
+<h1>Şikayet Et</h1>
+
+<div class="comment-top mt-4">
+    <h4>Leave a Comment</h4>
+    <div class="comment-bottom mt-2">
+        <form asp-action="Complain" asp-controller="Complain" method="post">
+            <input class="form-control " type="text" asp-for="Title" placeholder="Başlık" required="">
+            <input class="form-control mt-3" type="email" asp-for="Mail" placeholder="Email" required="">
+            <input class="form-control mt-3" asp-for="PetPostId" value="@ViewBag.Id" type="hidden">
+            <input class="form-control mt-3" asp-for="Status" value="@true" type="hidden">
+            <textarea class="form-control mt-3" placeholder="Mesajınız..." asp-for="Description" required=""></textarea>
+            <button type="submit" class="btn btn-primary submit">Gönder</button>
+        </form>
+    </div>
+</div>

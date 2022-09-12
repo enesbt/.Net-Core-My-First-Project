@@ -1,0 +1,40 @@
+﻿@model PetsProject.Models.SignInViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_MainLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+
+<body>
+    <section class="main-content-w3layouts-agileits">
+        <div class="container">
+            <h3 class="tittle">Giriş Yap</h3>
+            <div class="row inner-sec">
+                <div class="login p-5 bg-light mx-auto mw-100">
+                    <form  method="post">
+                        <div class="form-group">
+                            <label>Kullanıcı Adı</label>
+                            <input type="text" class="form-control" asp-for="UserName">
+
+                        </div>
+                        <div class="form-group">
+                            <label>Şifre</label>
+                            <input type="password" class="form-control" asp-for="Password" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+

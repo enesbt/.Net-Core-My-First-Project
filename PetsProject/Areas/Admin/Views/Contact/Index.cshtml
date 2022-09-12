@@ -1,0 +1,33 @@
+﻿@model List<EntityLayer.Concrete.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Mesajlar</h6>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>Mail</th>
+        <th>Mesaj</th>
+        <th>Aktif</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ContactId</th>
+            <td>@item.Name</td>
+            <td>@item.Mail</td>
+            <td>@item.Message</td>
+            <td>@item.Status</td>
+            <td><a href="/Admin/Contact/ActiveContact/@item.ContactId" class="btn btn-primary">Aktif Yap</a></td>
+            <td><a href="/Admin/Contact/PassiveContact/@item.ContactId" class="btn btn-secondary">Pasif Yap</a></td>
+        </tr>
+        
+    }
+
+</table>

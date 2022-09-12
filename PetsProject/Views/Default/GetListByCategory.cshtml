@@ -1,0 +1,56 @@
+﻿@model List<EntityLayer.Concrete.PetPost>
+@{
+    ViewData["Title"] = "GetListByCategory";
+    Layout = "~/Views/Shared/Layouts/_MainLayout.cshtml";
+}
+
+<section class="main-content-w3layouts-agileits">
+	<div class="container">
+		<div class="row">
+			<!--left-->
+			<div class="col-lg-2">
+				@await Component.InvokeAsync("DefaultFilterCategory")
+				@await Component.InvokeAsync("DefaultFilterType")
+				@await Component.InvokeAsync("DefaultFilterBreed")
+				@await Component.InvokeAsync("DefaultFilterAge")
+
+			</div>
+			<div class="col-lg-10 left-blog-info-w3layouts-agileits text-left">
+
+				<!--//silder-->
+				<!--//silder-->
+				<div class="blog-girds-sec">
+					<div class="row">
+						@foreach (var item in Model)
+						{
+							<div class="col-md-4 blog-grid-top mt-3">
+								<div class="b-grid-top">
+									<div class="blog_info_left_grid">
+										<img src="@item.ImageUrl" class="img-fluid" alt="">
+									</div>
+									<h3>
+										<a href="/Details/Details/@item.PetPostId">@item.Title </a>
+									</h3>
+
+									<p> @item.Description.Substring(0,8)</p>
+									<p><b>Tarih:</b>@item.PostTime.ToShortDateString()</p>
+									<p><b>Şehir:</b>@item.City.CityName.ToUpper()</p>
+									<p><b>Kategori:</b>@item.Category.CategoryName.ToUpper()</p>
+									<p><b>Tür:</b>@item.PetType.PetTypeName.ToUpper()</p>
+									<p><b>Cins:</b>@item.PetBreed.PetBreedName.ToUpper()</p>
+								</div>
+							</div>
+						}
+
+					</div>
+				</div>
+			</div>
+			<!--//left-->
+			<!--right-->
+			<!--//right-->
+		</div>
+	</div>
+</section>
+
+
+

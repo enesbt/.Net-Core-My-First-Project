@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.PetBreed
+@{
+    ViewData["Title"] = "EditBreed";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Düzenle</h6>
+
+<form method="post" class="form-group">
+
+    <input class="form-control" asp-for="PetBreedId" hidden />
+    <label>Cins Adı</label>
+    <input asp-for="PetBreedName" class="form-control" />
+    <br />
+    <label>Tür Adı</label>
+    @Html.DropDownListFor(x=>x.PetTypeId,(List<SelectListItem>)ViewBag.type,new{@class="form-control"})
+    <br />
+    <input class="btn btn-danger" value="Düzenle" type="submit" />
+</form>

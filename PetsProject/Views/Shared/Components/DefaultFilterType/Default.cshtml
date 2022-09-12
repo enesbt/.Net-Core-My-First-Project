@@ -1,0 +1,15 @@
+﻿@model List<EntityLayer.Concrete.PetType>
+
+<div class="tech-btm ">
+	<h4>Türler</h4>
+	<ul class="list-group single">
+
+		@foreach (var item in Model)
+		{
+			<li class="list-group-item d-flex justify-content-between align-items-center">
+				<a href="/Default/GetListByType/@item.PetTypeId">@item.PetTypeName</a>
+			</li>
+		}
+
+	</ul>
+</div>

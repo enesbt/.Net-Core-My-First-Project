@@ -1,0 +1,37 @@
+﻿@model List<EntityLayer.Concrete.PetPost>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h5>İlanlar</h5>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>Başlık</th>
+        <th>Kategori</th>
+        <th>Şehir</th>
+        <th>Durum</th>
+        <th>Detay</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.PetPostId</th>
+            <td>@item.Name</td>
+            <td>@item.Title</td>
+            <td>@item.Category.CategoryName</td>
+            <td>@item.City.CityName</td>
+            <td>@item.Status</td>
+            <td><a class="btn btn-outline-primary" href="/Admin/Post/PostDetails/@item.PetPostId">Detay</a></td>
+            <td><a class="btn btn-outline-success" href="/Admin/Post/ActivePost/@item.PetPostId">Aktif Yap</a></td>
+            <td><a class="btn btn-outline-warning" href="/Admin/Post/PassivePost/@item.PetPostId">Pasif Yap</a></td>
+        </tr>   
+    }
+</table>
+
+

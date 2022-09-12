@@ -1,0 +1,26 @@
+﻿@model PetsProject.Areas.Member.Models.EditProfileViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "EditProfile";
+    Layout = "~/Views/Shared/Layouts/_MemberLayout.cshtml";
+}
+
+<h1>Edit Profile</h1>
+
+<form method="post">
+    <label>İsim</label>
+    <input asp-for="Name" class="form-control" />
+    <br />
+    <label>Kullanıcı Adı</label>
+    <input asp-for="UserName" class="form-control" />
+    <br />
+    <label>Mail</label>
+    <input asp-for="Email" class="form-control" />
+    <br />
+    <label>Şifre</label>
+    <input asp-for="Password" class="form-control" />
+    <br />
+
+    <input class="btn btn-outline-success" type="submit" value="Düzenle" />
+
+</form>

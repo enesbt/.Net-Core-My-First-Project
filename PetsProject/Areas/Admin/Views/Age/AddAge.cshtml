@@ -1,0 +1,13 @@
+﻿@model EntityLayer.Concrete.PetAge
+@{
+    ViewData["Title"] = "AddAge";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Yaş Ekle</h6>
+
+<form method="post" class="form-group">
+    <label>Yaş</label>
+    <input asp-for="Age" class="form-control" />
+    <input type="submit" value="Ekle" class="btn btn-outline-dark" />
+</form>

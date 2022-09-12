@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+	
+
+	@await Html.PartialAsync("/Views/ViewPartials/DefaultPartials/_DefaultHead.cshtml")
+<body>
+	<!--Header-->
+	@await Html.PartialAsync("/Views/ViewPartials/MemberPartial/_MemberHeaderPartial.cshtml")
+
+	@await Component.InvokeAsync("DefaultSliderComponent")
+	<div class="container">			
+		@RenderBody()
+	</div>
+
+	@await Html.PartialAsync("/Views/ViewPartials/DefaultPartials/_DefaultFooter.cshtml")
+	@await Html.PartialAsync("/Views/ViewPartials/DefaultPartials/_DefaultScripts.cshtml")
+</body>
+
+</html>

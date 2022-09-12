@@ -1,0 +1,37 @@
+﻿@model EntityLayer.Concrete.PetPost
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "AddPost";
+    Layout = "~/Views/Shared/Layouts/_MemberLayout.cshtml";
+}
+
+<h1>İlan Ver</h1>
+
+<form method="post" class="form-group" >
+    <input asp-for="Name" type="hidden" value="@ViewBag.name" />
+    <label>Telefon Numaranız</label>
+    <input class="form-control" asp-for="PhoneNumber" />
+    <label>Başlık</label>
+    <input class="form-control" asp-for="Title" />
+    <label>Açıklama</label>
+    <input class="form-control" asp-for="Description" />
+  
+  
+    <input class="form-control" asp-for="PostTime" type="hidden" />
+
+    <label>Kategori</label>
+    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.category,new{@class="form-control"})
+    <label>Tür</label>
+    @Html.DropDownListFor(x=>x.PetTypeId,(List<SelectListItem>)ViewBag.type,new{@class="form-control"})
+    <label>Cins</label>
+    @Html.DropDownListFor(x=>x.PetBreedId,(List<SelectListItem>)ViewBag.breed,new{@class="form-control"})
+    <label>Yaş Aralığı</label>
+    @Html.DropDownListFor(x=>x.PetAgeId,(List<SelectListItem>)ViewBag.age,new{@class="form-control"})
+    <label>Şehir</label>
+    @Html.DropDownListFor(x=>x.CityId,(List<SelectListItem>)ViewBag.city,new{@class="form-control"})
+
+    <label>Fotoğraf Link</label>
+    <input class="form-control" asp-for="ImageUrl" />
+        <br />
+    <input value="GÖNDER" class="btn btn-outline-danger" type="submit" />
+</form>

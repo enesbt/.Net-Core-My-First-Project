@@ -1,0 +1,27 @@
+﻿@model List<EntityLayer.Concrete.City>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Şehirler</h6>
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Şehir Adı</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CityId</td>
+            <td>@item.CityName</td>
+            <td><a href="/Admin/City/EditCity/@item.CityId" class="btn btn-outline-danger">Düzenle</a></td>
+            <td><a href="/Admin/City/DeleteCity/@item.CityId" class="btn btn-outline-info">Sil</a></td>
+        </tr>
+        
+    }
+</table>
+
+<a href="/Admin/City/AddCity" class="btn btn-outline-danger">Yeni Şehir Ekle</a>

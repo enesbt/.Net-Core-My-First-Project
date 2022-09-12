@@ -1,0 +1,12 @@
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\Enes\source\repos\PetsProject\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

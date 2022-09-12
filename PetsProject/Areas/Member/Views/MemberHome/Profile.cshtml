@@ -1,0 +1,12 @@
+﻿@model EntityLayer.Concrete.AppUser
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/Layouts/_MemberLayout.cshtml";
+}
+
+<h1>Profilim</h1>
+
+<p>@Model.Name</p>
+<p>@Model.UserName</p>
+<p>@Model.Email</p>
+<a href="/Member/MemberHome/EditProfile" class="btn btn-outline-danger">Profil Düzenle</a>

@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Concrete.PetType
+@{
+    ViewData["Title"] = "EditType";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Tür Düzenle</h6>
+
+<form method="post" class="form-group">
+
+  <input class="form-control" asp-for="PetTypeId" hidden />
+    <label>Tür Adı</label>
+    <input asp-for="PetTypeName" class="form-control" />
+    <br />
+    <input class="btn btn-danger" value="Düzenle" type="submit" />
+</form>

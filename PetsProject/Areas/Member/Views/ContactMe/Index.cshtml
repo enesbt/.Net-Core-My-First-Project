@@ -1,0 +1,25 @@
+﻿@model List<EntityLayer.Concrete.ContactMe>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_MemberLayout.cshtml";
+}
+<br />
+<h6>Mesajlarım</h6>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>İsim</th>
+        <th>Mail</th>
+        <th>Telefon</th>
+        <th>Mesaj</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Mail</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Message</td>
+        </tr>
+    }
+</table>

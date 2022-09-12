@@ -1,0 +1,31 @@
+﻿@model List<EntityLayer.Concrete.PetType>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Türler</h6>
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Tür Adı</th>
+        <th>Aktif</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PetTypeId</td>
+            <td>@item.PetTypeName</td>
+            <td>@item.Status</td>
+            <td><a href="/Admin/Type/ActiveType/@item.PetTypeId" class="btn btn-outline-danger">Aktif Yap</a></td>
+            <td><a href="/Admin/Type/PassiveType/@item.PetTypeId" class="btn btn-outline-danger">Pasif Yap</a></td>
+            <td><a href="/Admin/Type/EditType/@item.PetTypeId" class="btn btn-outline-danger">Düzenle</a></td>
+        </tr>
+
+    }
+</table>
+
+<a href="/Admin/Type/AddType" class="btn btn-outline-danger">Yeni Kategori Ekle</a>

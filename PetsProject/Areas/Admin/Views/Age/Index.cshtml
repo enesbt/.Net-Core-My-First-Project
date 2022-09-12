@@ -1,0 +1,32 @@
+﻿@model List<EntityLayer.Concrete.PetAge>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+
+<h6>Yaş Aralıkları</h6>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Yaşlar</th>
+        <th>Aktif</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PetAgeId</td>
+            <td>@item.Age</td>
+            <td>@item.Status</td>
+            <td><a href="/Admin/Age/ActiveAge/@item.PetAgeId" class="btn btn-outline-danger">Aktif Yap</a></td>
+            <td><a href="/Admin/Age/PassiveAge/@item.PetAgeId" class="btn btn-outline-danger">Pasif Yap</a></td>
+            <td><a href="/Admin/Age/EditAge/@item.PetAgeId" class="btn btn-outline-danger">Düzenle</a></td>
+        </tr>
+
+    }
+</table>
+
+<a href="/Admin/Age/AddAge" class="btn btn-outline-danger">Yeni Yaş Aralığı Ekle</a>

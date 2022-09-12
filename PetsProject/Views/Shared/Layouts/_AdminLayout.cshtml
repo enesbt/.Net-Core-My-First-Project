@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+    @await Html.PartialAsync("/Views/ViewPartials/AdminPartial/_AdminHeadPartial.cshtml")
+<body class="g-sidenav-show bg-gray-100">
+    @await Html.PartialAsync("/Views/ViewPartials/AdminPartial/_AdminNavbar.cshtml")
+  <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+        @RenderBody()
+  
+    <div class="container-fluid py-4">
+      <div class="row">
+       
+     
+     
+       
+      </div>
+            @await Html.PartialAsync("/Views/ViewPartials/AdminPartial/_AdminFooter.cshtml")
+    </div>
+  </div>
+    @await Html.PartialAsync("/Views/ViewPartials/AdminPartial/_AdminScripts.cshtml")
+</body>
+
+</html>

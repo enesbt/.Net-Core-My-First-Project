@@ -1,0 +1,37 @@
+﻿@model List<EntityLayer.Concrete.Complain>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+<br />
+<h6>Şikayetler</h6>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Mail</th>
+        <th>İlan</th>
+        <th>Aktif</th>
+        <th>Aktif Yap</th>
+        <th>Pasif Yap</th>
+    
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ComplainId</th>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Mail</td>
+            <td><a href="/Admin/Complains/PostDetails/@item.PetPostId" class="btn btn-outline-warning">İlan Detay</a></td>
+            <td>@item.Status</td>
+            <td>  <a href="/Admin/Complains/ActiveComplain/@item.ComplainId" class="btn btn-outline-primary">Aktif Yap</a></td>
+            <td><a href="/Admin/Complains/PassiveComplain/@item.ComplainId" class="btn btn-outline-secondary">Pasif Yap</a></td>
+                    
+        </tr>
+
+    }
+
+</table>

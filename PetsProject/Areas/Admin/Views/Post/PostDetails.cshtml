@@ -1,0 +1,49 @@
+﻿@model EntityLayer.Concrete.PetPost
+@{
+    ViewData["Title"] = "PostDetails";
+    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+}
+<br />
+<h5>İlan Detayları</h5>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="@Model.ImageUrl" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table tabtable-bordered">
+                <tr>
+                    <th>İsim</th>
+                    <th>Telefon</th>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>Tarih</th>
+                    <th>Kategori</th>
+                    <th>Tür</th>
+                    <th>Cins</th>
+                    <th>Şehir</th>
+                    <th>Durum</th>
+
+                </tr>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.PhoneNumber</td>
+                    <td>@Model.Title</td>
+                    <td>@Model.Description</td>
+                    <td>@Model.PostTime.ToString("dd-MMM-yyyy")</td>
+                    <td>@Model.Category.CategoryName</td>
+                    <td>@Model.PetType.PetTypeName</td>
+                    <td>@Model.PetBreed.PetBreedName</td>
+                    <td>@Model.City.CityName</td>
+                    <td>@Model.Status</td>
+
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
